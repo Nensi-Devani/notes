@@ -6,7 +6,8 @@
 -> <T> stands for Type (a generic type parameter), allowing the method to work with any object type while maintaining compile-time type safety.
 
 * [INFO], [ERROR] = logs
-* IdGenerator :
+* Why my logic does not work -> because it will not be able to find the id of object..
+* IdGenerator : (we have getId()) -> to get the id of an object
 -> How will it work?
 	- Read all objects from the file.
 	- Find the last object's ID.
