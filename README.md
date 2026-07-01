@@ -15,6 +15,21 @@
 	- Increment it.
 	- Return
 
+*** Flow ***
+App (Main)
+   ↓
+LoginController
+   ↓
+Role detection
+   ↓
+AdminController / CustomerController / etc
+   ↓
+Facade (CheckoutFacade)
+   ↓
+Services
+   ↓
+Repositories
+
 ** create common repo for common methods **
 
 MessageConstants = unwanted messages ...
