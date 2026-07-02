@@ -1,0 +1,94 @@
+Module 2 :
+
+OOAD = object oriented analytics and design
+SOLID principles
+S - SRP (every class must have requirement)
+O - OCP (Open / close principle) => open for extension but close for modification (new things are welcome without disturbing old code, old feature we can not change, only add new)
+
+S — Single Responsibility Principle (SRP)
+O — Open/Closed Principle (OCP)
+L — Liskov Substitution Principle (LSP)
+I — Interface Segregation Principle (ISP)
+D — Dependency Inversion Principle (DIP)
+
+S = One job
+O = Extend, don't modify
+L = Subtypes must behave correctly - parent class must be replasable by child class
+I = Small focused interfaces
+D = Depend on abstractions, not details
+
+Day 11 : 
+	loosely coupled = code with no dependency
+	service layer = code for business logic
+	S - SRP = student entollment task
+	O - Open / Closed = notification task
+
+jvm = provides default constructor if we have not written.
+
+Day 12 :
+	L - LSP = bird task
+	I - ISP = hospital equipment management system
+	D - DIP = 
+	Thick / Fatty Interface = An interface that contains too many methods, forcing implementing classes to implement methods they do not need.
+
+Day 13 : Design Pattern
+	best practices used by experienced object-oriented software developers
+	Creational :::
+	Singleton = only one object should be created
+	Factory = hiding the object creation logic / how object are internally created (solid o violates)
+	Abstract factory design = factory of factories (prevents solid o - ocp violation)
+	builder = Useful when an object has many optional parameters or needs to be built in multiple steps.
+	prototype = Creates new objects by copying an existing (prototype) object instead of building from scratch.
+		- shallow copy = Student s2 = s1 (reference copy) - object is still one
+		- deep copy = s2.name = s1.name; (value copy) - different object created
+
+Day 14 : Design Pattern
+	Structural :::
+	Facade = hide internal structure / complexity
+	Decorator = dynamically adds new functionality to an object by wrapping it with another 		    object, without changing the original object's code.
+		- decorator = not compulsory (ex. : paneer, cheese in Pizza)
+	Adapter = makes incompatable class compatable with interface
+	Proxy = Controls access to another object by acting as its substitute.
+		- Use Proxy when: I want to control access to an object
+	Composite = Treats individual objects and groups of objects in the same way.
+		- Use Composite when: I have a tree structure and want to treat single objects 			  and groups uniformly.	
+		- File system example (Folder -> Folder -> File)
+
+Day 15 : Design Pattern
+	Behavioural ::: object communication
+	Observer : Notifies multiple objects when one object's state changes.
+		- Use Observer when: I want multiple objects to automatically react to changes 			  in another object.
+		- change happen then the task starts (Account money get from ATM -> sms, email, 		  WhatsApp notification send)
+	State : Changes an object's behavior based on its current state.
+		- Use State when: An object's behavior depends on its internal state and changes 		  over time.
+		- changes it's own state
+	Strategy : Defines a family of algorithms, encapsulates each one, and makes them 			   interchangeable.
+		- Provides different ways to perform the same task.
+		- Use Strategy when: You have multiple ways to perform the same task and want to 		  switch the algorithm at runtime without changing the client code.
+		- (one employee - different responsibility when intern, jr developer, sr 			  developer)
+
+
+command design pattern
+iterator design pattern
+
+Day 16 :
+	Mavel Repository = extra dependancy
+	- types of testing (white box, black box, grey box, unit .. etc)
+	- Unit Testing : developer is responsible
+	- folder structure :
+		resources = configuration
+		mavan : src -> main -> java = write code 
+	- @BeforeEach = call method before each method
+	- ex :	@BeforeEach
+    		void init(){
+        		calculator = new Calculator();
+    		}
+	- @BeforeAll = static // only one object created
+	- @AfterAll = after each method executed	
+	
+* TDD approach = test driven development approach (first write test case then develop app)
+	- Red -> Green -> Refecter
+	
+	
+		
+	
