@@ -1,0 +1,10 @@
+print in table format
+
+Admin :
+	- admin can add another admin
+	- admin should add new restaurant
+	- view restaurant should display all the restaurants
+	- 2. Approve Restaurant = logout
+	- when restaurant user added -> name = restaurant name, user name (both)
+	
+file create logic
