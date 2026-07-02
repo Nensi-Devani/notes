@@ -1,0 +1,337 @@
+java + angular = max 3 months
+
+core java
+advance java
+spring boot
+microservices
+angular
+REST architecture
+
+Day - 1 : 
+java history : embedded system programming, oak name before than renamed with java, just another virtual accelerator called by who loves java, robust = mistake free (strong memory management, exception handling), 
+secure
+oop based
+jdk-jvm
+multi-threaded programming language
+byte code is platform independed
+
+
+driver = only used for input and output (main method)
+class = nown, method = verb
+
+
+day 2 :
+int arr[] = new int[5]; // initialize 5 element -> default value = 0
+define break point to debug
+step into = (f7) 
+step over = direct output(use sfor particular function when we know that function is generating exception)
+step out = go to that place from where the function is called
+
+Day 3 : (Git)
+GitHub -> Webhook -> Jenkins(compile, validate, review, execute) -> server(AWS/AZURE/GCP)
+Terraform => creating instance on the server
+Grafara/Prometheus => monitoring tool
+* Git :
+	1. Version control
+	2. Types of version control
+		- DVCS
+		- CVCS
+	3. Introduction
+	4. Life Cycle Of Git-repo
+		1. Working Directory
+		2. Staging area
+		3. Commit
+	5. Commands
+		git init
+		git status
+		git add .
+		git commit -m "message"
+		git remote
+		git push
+		git diff
+		git log = commit history
+		git log --graph = commit history
+		git rm --cached = remove file from add
+		git branch -d branch_name = delete branch
+		git branch -D feature-login = force-delete branch
+
+		Conflict ::: git merge f1
+			* add, commit from f1
+			* add, commit from main
+			* merge both the branch (get conflict, resolve using editor)
+	6. Merging in Git
+	7. Resolving merge conflict
+	8. Work flow
+
+src -> new package : com.tss.test -> new class : Calculator.java -> 
+
+Day 3: for java
+	system software 
+	application software
+	first oop language = simula67, then c, then c++ by combining these 2
+	class = logical entity / object = physical entity
+	default access specifier = access in the class which are only in the same
+				   package
+	Box box = new BOx();
+	reference = object
+	
+	this = refers to current object
+	
+	object = heap memory
+	variables = stack memory
+
+Day - 4 :
+	static method can only access static data members
+	good practice = className.staticMethodName;
+	static is member of class not refers to any object
+	static block (in class, in main or anywhere) gets executed when class is loaded.
+	static block = calls when class is loaded
+	non static block = calls when object of that class is created.
+	calling flow : static block -> non static block -> constructor
+	parent to chind = is A relationship, represents generalization & specialization
+	super class = parent class
+	sub class = child class
+	if we have toString method then we can directly print the object
+	toString instead of display() method.
+
+Day - 5 : (run-time polymorephism / dynamic method dispatch)
+	Box boxweight = new Boxweight(10,20,30,40); (access anything from Box | not access from BoxWeight)
+	BoxWeight boxweight = new Boxweight(10,20,30,40); (access anything from Box and BoxWeight)
+
+	a super class reference can refer to sub class object but it can access only those element which are inherited
+	It is not reference that decide which version of overridden method to call, it is object to which that reference is referring at runtime	
+	Box boxweight = new Boxweight(10,20,30,40);
+	boxweight.show(); // call the overridden method from BoxWeight class (not call from Box - same method in both class)
+	Abstract class & Interface
+	can not create object of abstract class (should have atleast 1 abstract method)
+		- which does not have body
+	interface 
+		- data member : public static final
+		- method : 
+	
+Day 6 : (MIMP)
+	abstract D implements A, D1 extends D, => A obj = new D1(); is possible
+	abstract class method = public (by default) so in child class we need to write those methods as public, bcz we can't decrease the scope of the methods
+	multiple class inheritance = diamond problem
+	from java 8 = it is possible to declare and write the code inside interface method
+		default / private void show()
+		{
+			sout("show");
+		}
+		not required for definition of this method in child class in which interface is implemented
+		reason for use = the method which is same in all the classes.
+		
+		private void m1(){ sout("m1")} can not call using reference in implemented child class
+		static method can be call in child of interface = InterfaceName.methodName()
+		default method can be override
+	static method can not be over ridden
+Error :		interface A { 
+    default void demo() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    default void demo() {
+        System.out.println("B");
+    }
+}
+
+class C implements A, B {
+}
+
+Solution: 
+	interface A {
+    default void demo() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    default void demo() {
+        System.out.println("B");
+    }
+}
+
+class C implements A, B {
+    @Override
+    public void demo() {
+        A.super.demo();   // or B.super.demo() // Use the default implementation provided by this interface.
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.demo();
+    }
+}
+
+if both parent interface have same method we need to override in child.
+	why java robust :
+		memory management
+		exception handling
+	String[] args = command line arguments
+	
+Day 6: 
+	exception handling
+	checked and unchecked exceptions : checked = checked at compile time
+					 unchecked = checked at run time
+	class should be child class of Exception / RuntimeException
+					checked = Exception
+					unchecked = RuntimeException	
+	user defined Exception class = if we do not write anything then also fine
+	
+
+Day 7:
+	collections
+		list -> arraylist
+		set -> treeset
+	sorting / custom sorting in collections :
+		comparable
+		comparator (sort based on names)
+	hw : how hashset internaly works
+	     File Handling 
+		(read, write)
+		File  class
+		serialization + deserialization
+		
+	     movie application task
+		from file to List<> in program
+		add movie -> List<>, Save movie -> store in file
+		
+
+1. load movie
+2. add movie
+3. save movie
+4. search movie
+5. sort movie (id, name, new)
+6. remove movie
+	
+Day 8 :
+	marker interface = does not have any abstract method (main task = tagging, just to make differentiate between 2 class)
+	hashset, treeset, likedlistset = order maintainability (check)
+	Map :
+		key -> value = called as entry (key) (1 record) in map (value can repeat but key won't)
+		key repeat = update the value
+	Why use Map.Entry ?
+		Because a Map stores data as key → value pairs, and map.entrySet() gives you access to each pair as a single object.	
+		In short Map.Entry is required because it represents one key-value pair from the map.
+	functional interface is an interface that contains exactly one abstract method,
+		can have more no. of static, private, default method
+		but abstract method can be only 1
+		Advantage :
+			pass 1 method definition as an parameter to another method
+			can implement method directly and assign it to a variable / reference of interface (from which the method belongs)
+	anonymous class :
+		An anonymous class in Java is a nameless inner class defined and instantiated in a single 				expression, usually used to override methods or implement interfaces on the spot.
+		
+	Functional Interface (Inbuilt) = can implement using anonymous class: (we can pass and return any data-type)
+		Consumer<Integer> => function accepts something and does not return anything   : accept(int n)
+		Function<Integer, Integer> => function accepts something and returns something : apply(int n) return x;
+		Predicate<Integer> => function accepts something and returns always Boolean    : test(int n) return t/f;
+		Supplier<Integer> => function does not accept anything and returns something   : get() return x;
+		UnaryOperator<Integer> => function accepts 1 input and return same type output : apply(int n)
+		BinaryOperator<Integer> => function accepts 2 input and return same type output: apply(int i, int j)
+
+		Consumer - 1 perameter
+		BiComsumer = 2 perameter
+		BiFunction = 2 perameter
+		BiPredicate = 2 perameter
+	
+Day 9 :
+	lambda advantage:
+		line of code reduce
+		pass one function to another function
+		execution in single line
+	* Stream API = lambda & functional interface
+	stream -> sequence of bytes (0 and 1) that can be attached to input or output
+		attached to input then it's input stream
+		System.in is also a stream
+		it understands that which key is presses in keyboard then gives us(all process done in bytes 0 & 1)
+		- if A pressed then A should be display that is the job if stream
+	Stream API :
+		provides stream, but this time it is not attached to any physical device instead it is attached to collection
+		- operation perform in stream, original collection remains as it is un-changed.
+		terminal operation = if output returns final output (task completed)
+		intermediate operation = if output returns another stream (task not-completed)
+		- we can use every stream only at once.
+		
+Day - 10 :
+	Object casthelenics : some rules / guidelines to write code
+	thread scheduler = can run one thread at a time
+	future 
+	thread / executor methods
+	
+
+	
+Hw : Tic Tak Toe = by following all the object casthelenics rules (oop style)
+
+HW = Multithreading 
+
+yesterday - Comparator
+today 3 tasks - screenshort
+movie - file handling
+hashset - working
+lists / collections
+errors and basic
+
+
+nested class => static / non-static class (inner class)
+object for static / non-static class inside- outside
+shopping cart system : 
+	create bill : custname, date, lineItem id, product name, price, quantity, total price
+	shopping cart add = minus from stock
+	admin part : maintain stock,
+	user :
+		view product
+		add product to cart
+		view cart
+		remove product from cart
+		place order
+		view order history
+		payment
+	Admin:	
+		view products
+		update quantity
+		add product
+		remove product
+		
+
+multithreading, functional interface, 
+
+* MIMP = Java 8 feature
+* Object is parent class of all the classes in java
+* toString() method = comes from Object class. we over ride it
+* getMessage = comes from Object class
+
+Serialization: Converting a Java object into a byte stream so it can be stored or transmitted.
+
+Deserialization: Converting a byte stream back into a Java object.
+
+git change:
+	05 -> 06
+	abstract -> interface
+
+Task :
+	static block in inheritance (observe the execution)
+	access specifier scope (in same and different package, class and sub class)
+	can we create constructor of interface to change the data member value
+	difference between abstract and interface (advantages)
+	Wrapper class
+	
+	
+HW : 
+	connect account and paymentmethod app
+	2 Exception in Account app (1. Negative amount exception, 2. Minimum balance exception)
+	
+	
+HW :::
+String 
+StringBuffer
+StringBuilder
+
+repos :::
+session
+assignment
+portal assignment
