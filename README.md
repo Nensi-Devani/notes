@@ -1,4 +1,8 @@
 # notes
+- discount
+- out for delivery
+
+
 * why BusinessException ?
 -> remove multiple catch blocks and also we don't need to remember what exception we wrote for the particular logic
 
