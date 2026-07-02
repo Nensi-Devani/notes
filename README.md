@@ -1,6 +1,7 @@
 # notes
 - discount
 - out for delivery
+- select address / add new (user place order)
 
 
 * why BusinessException ?
